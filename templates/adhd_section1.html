@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="../static/assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../static/assets/img/favicon.png">
+    <title>
+        Sparkle
+    </title>
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <!-- Nucleo Icons -->
+    <link href="../static/assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../static/assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="../static/assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link id="pagestyle" href="../static/assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
+    <style>
+        body {
+  background-image: url("../static/assets/img/bg6.jpg");
+  background-size: cover;
+}
+    
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .form-container {
+        display: flex;
+           justify-content: center;
+        align-items: center;
+    }
+    .upload-files-container {
+        background-color: #f7fff7;
+        width: 620px;
+        padding: 30px 60px;
+        border-radius: 40px;
+        display: flex;
+           align-items: center;
+           justify-content: center;
+        flex-direction: column;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 20px, rgba(0, 0, 0, 0.28) 0px 6px 6px;
+    }
+    .drag-file-area {
+        border: 2px dashed #7b2cbf;
+        border-radius: 40px;
+        margin: 10px 0 15px;
+        padding: 30px 50px;
+        width: 450px;
+        text-align: center;
+    }
+    .drag-file-area .upload-icon {
+        font-size: 50px;
+    }
+    .drag-file-area h3 {
+        font-size: 26px;
+        margin: 15px 0;
+    }
+    .drag-file-area label {
+        font-size: 19px;
+    }
+    .drag-file-area label .browse-files-text {
+        color: #7b2cbf;
+        font-weight: bolder;
+        cursor: pointer;
+    }
+    .browse-files span {
+        position: relative;
+        top: -25px;
+    }
+    .default-file-input {
+        opacity: 0;
+    }
+    .cannot-upload-message {
+        background-color: #ffc6c4;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        margin: 5px 0;
+        padding: 5px 10px 5px 30px;
+        border-radius: 5px;
+        color: #BB0000;
+        display: none;
+    }
+    @keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+    .cannot-upload-message span, .upload-button-icon {
+        padding-right: 10px;
+    }
+    .cannot-upload-message span:last-child {
+        padding-left: 20px;
+        cursor: pointer;
+    }
+    .file-block {
+        color: #f7fff7;
+        background-color: #7b2cbf;
+          transition: all 1s;
+        width: 390px;
+        position: relative;
+        display: none;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0 15px;
+        padding: 10px 20px;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+    .file-info {
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+    }
+    .file-icon {
+        margin-right: 10px;
+    }
+    .file-name, .file-size {
+        padding: 0 3px;
+    }
+    .remove-file-icon {
+        cursor: pointer;
+    }
+    .progress-bar {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        left: 4.5%;
+        width: 0;
+        height: 5px;
+        border-radius: 25px;
+        background-color: #4BB543;
+    }
+    .upload-button {
+        font-family: 'Montserrat';
+        background-color: #7b2cbf;
+        color: #f7fff7;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        border: none;
+        border-radius: 20px;
+        margin: 10px;
+        padding: 7.5px 50px;
+        cursor: pointer;
+    }
+    </style>
+</head>
+
+<body class="  bg-gray-100" >
+    
+        <!-- End Navbar -->
+        <section class="py-4">
+            <div class="container" background="../static/assets/img/bg2.jpeg">
+              <div class="row justify-space-between py-2">
+                <div class="col-9 mx-auto mt-3">
+                  <div class="card">
+                    <iframe  src="https://www.youtube.com/embed/r0G86-0-4O4" class="col-12 mx-auto" style="height: 220px; width: 350px; border: radius 25px; zoom: 250%; "></iframe>
+              
+                                        <div class="position-relative overflow-hidden" style="height:50px;margin-top:-50px;">
+                      <div class="position-absolute w-100 top-0 z-index-1">
+                          <svg class="waves waves-sm" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
+                            <defs>
+                              <path id="card-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+                            </defs>
+                            <g class="moving-waves">
+                              <use xlink:href="#card-wave" x="48" y="-1" fill="rgba(255,255,255,0.30"></use>
+                              <use xlink:href="#card-wave" x="48" y="3" fill="rgba(255,255,255,0.35)"></use>
+                              <use xlink:href="#card-wave" x="48" y="5" fill="rgba(255,255,255,0.25)"></use>
+                              <use xlink:href="#card-wave" x="48" y="8" fill="rgba(255,255,255,0.20)"></use>
+                              <use xlink:href="#card-wave" x="48" y="13" fill="rgba(255,255,255,0.15)"></use>
+                              <use xlink:href="#card-wave" x="48" y="16" fill="rgba(255,255,255,0.99)"></use>
+                            </g>
+                          </svg>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST"> <input name="cam" type="submit"></form>
+                      <h4>Soft UI Design System</h4>
+                      <p>
+                        One of the most beautiful and complex UI Kits built by the team behind Creative Tim. That&#34;s pretty impressive.
+                      </p>
+                      <a href="https://www.youtube.com/embed/tgbNymZ7vqY;" class="text-primary icon-move-right">More about us
+                        <i class="fas fa-arrow-right text-xs ms-1" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+              </div>
+              <!-- <button style="margin-left:600px;" class="upload-button" onclick="window.location.href='{{ url_for( 'adhd_questions') }}';">Next</button> -->
+           
+                <a href="/adhd_questions"><input name="next" value="next" type="submit"></a>
+            
+            </div>
+          </section>
+    <!--   Core JS Files   -->
+    <script src="../static/assets/js/core/popper.min.js"></script>
+    <script src="../static/assets/js/core/bootstrap.min.js"></script>
+    <script src="../static/assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="../static/assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script>
+        var win = navigator.platform.indexOf('Win') > -1;
+        if (win && document.querySelector('#sidenav-scrollbar')) {
+            var options = {
+                damping: '0.5'
+            }
+            Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+        }
+    </script>
+    <!-- Github buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="../static/assets/js/soft-ui-dashboard.min.js?v=1.0.3"></script>
+</body>
+
+</html>

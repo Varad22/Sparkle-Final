@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-image: url('../static/assets/img/bg.jpg');background-size:cover ;" >
+    <h1 style="margin-top: 200px;">Break Timer</h1>
+    <div id="clockdiv" >
+      <div>
+        <span class="minutes"></span>
+        <div class="smalltext">Minutes</div>
+      </div>
+      <div>
+        <span class="seconds"></span>
+        <div class="smalltext">Seconds</div>
+      </div>
+    </div>
+    <style>
+        body{
+	text-align: center;
+	background: #ffffff;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+h1{
+  color: #396;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 40px 0px 20px;
+}
+
+#clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
+}
+
+#clockdiv > div{
+	padding: 10px;
+	border-radius: 3px;
+	background: #00BF96;
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 15px;
+	border-radius: 3px;
+	background: #00816A;
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+}
+    </style>
+    <script>
+        function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  return {
+    'total': t,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+function ChangeColor() {
+  if (minutes == 5) {
+  document.getElementById("clockdiv").style.background = '#32a832';
+
+  } else if(minutes == 4) {
+    document.change.bgColor = "yellow";
+  }
+  else if (minutes == 1) {
+    document.change.bgColor = "red";
+  }
+}
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+ 
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+
+var deadline = new Date(Date.parse(new Date()) + 5 * 60 * 1000);
+initializeClock('clockdiv', deadline);
+    </script>
+    <br><br><br>
+    <a href="/common_test2"><button id="mybutton" class="mybutton" style="background-color: #00BF96;height: 7vh;width: 20vh;color: #fff;size: 50px;font-size: 25px;font-weight: bold;">Start Test</button></a>
+     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+     <script>
+     $(document).ready(function() {
+       $('#mybutton').hide().delay(10000).fadeIn(2200);
+ });
+     </script>
+</body>
+</html>
